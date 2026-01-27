@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatórios da Diretoria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login">
+    <h2>Acesso Restrito</h2>
+    <input type="password" id="senha" placeholder="Digite a senha">
+    <button onclick="acessar()">Entrar</button>
+    <p id="erro"></p>
+</div>
+
+<div id="conteudo" class="hidden">
+    <h1>Relatórios Power BI</h1>
+
+    <iframe 
+        title="Relatório Diretoria"
+        src="COLE_AQUI_O_LINK_DO_POWER_BI"
+        allowFullScreen="true">
+    </iframe>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
 
