@@ -2,29 +2,39 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Relatórios da Diretoria</title>
+    <title>Portal de Relatórios | Diretoria</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="login">
-    <h2>Acesso Restrito</h2>
-    <input type="password" id="senha" placeholder="Digite a senha">
-    <button onclick="acessar()">Entrar</button>
-    <p id="erro"></p>
-</div>
+<div class="layout">
 
-<div id="conteudo" class="hidden">
-    <h1>Relatórios Power BI</h1>
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+        <h2>📊 Diretoria</h2>
 
-    <iframe 
-        title="Relatório Diretoria"
-        src="https://app.powerbi.com/view?r=eyJrIjoiYjAwMmM0NzUtNmM3OS00OWIyLThhNTItMTg1OGExMzM5MTk5IiwidCI6ImJiNWFlODA1LTM1YmYtNGRkNS05NGZlLWQ4M2JiMWVkNDI0MiJ9"
-        allowFullScreen="true">
-    </iframe>
+        <button onclick="carregarRelatorio('faturamento')">
+            Faturamento
+        </button>
+
+        <button onclick="carregarRelatorio('outro')">
+            Outro Relatório
+        </button>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="content">
+        <h1 id="titulo">Relatório de Faturamento</h1>
+
+        <iframe
+            id="iframeRelatorio"
+            src="COLE_AQUI_O_LINK_DO_RELATORIO_DE_FATURAMENTO"
+            allowfullscreen>
+        </iframe>
+    </main>
+
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
