@@ -23,15 +23,22 @@
     </aside>
 
     <!-- CONTEÚDO -->
-    <main class="content">
-        <h1 id="titulo">Relatório de Faturamento</h1>
+<main class="content">
 
-        <iframe
-            id="iframeRelatorio"
-            src="https://app.powerbi.com/view?r=eyJrIjoiYjAwMmM0NzUtNmM3OS00OWIyLThhNTItMTg1OGExMzM5MTk5IiwidCI6ImJiNWFlODA1LTM1YmYtNGRkNS05NGZlLWQ4M2JiMWVkNDI0MiJ9"
-            allowfullscreen>
-        </iframe>
-    </main>
+    <!-- TOPO DO CONTEÚDO (título + botão) -->
+    <div class="top-bar">
+        <h1 id="titulo">Relatório de Faturamento</h1>
+        <button onclick="toggleFullscreen()">🔍 Tela cheia</button>
+    </div>
+
+    <!-- RELATÓRIO -->
+    <iframe
+        id="iframeRelatorio"
+        src="https://app.powerbi.com/view?r=SEU_LINK"
+        allowfullscreen>
+    </iframe>
+
+</main>
 
 </div>
 
