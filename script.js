@@ -15,6 +15,3 @@ function carregarRelatorio(nome) {
     document.getElementById("titulo").innerText = relatorio.titulo;
     document.getElementById("iframeRelatorio").src = relatorio.url;
 }
-function toggleFullscreen() {
-    document.body.classList.toggle("fullscreen");
-}
