@@ -1,38 +1,63 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
     margin: 0;
-    padding: 0;
-    text-align: center;
+    background: #f4f6f8;
 }
 
-#login {
-    margin-top: 100px;
+.layout {
+    display: flex;
+    height: 100vh;
 }
 
-input {
-    padding: 10px;
-    width: 250px;
+/* MENU */
+.sidebar {
+    width: 240px;
+    background: #0b3c5d;
+    color: white;
+    padding: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #1c6ea4;
+    border: none;
+    color: white;
+    font-size: 15px;
     cursor: pointer;
+    border-radius: 4px;
 }
 
-#erro {
-    color: red;
+.sidebar button:hover {
+    background: #155a8a;
 }
 
-.hidden {
-    display: none;
+/* CONTEÚDO */
+.content {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.content h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 iframe {
-    width: 95%;
-    height: 80vh;
+    width: 100%;
+    height: calc(100vh - 100px);
     border: none;
-    margin-top: 20px;
+    border-radius: 6px;
 }
-
