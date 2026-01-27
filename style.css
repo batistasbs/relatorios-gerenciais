@@ -61,23 +61,3 @@ iframe {
     border: none;
     border-radius: 6px;
 }
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-/* MODO TELA CHEIA DO PORTAL */
-.fullscreen .sidebar {
-    display: none;
-}
-
-.fullscreen .content {
-    padding: 0;
-}
-
-.fullscreen iframe {
-    height: 100vh;
-    border-radius: 0;
-}
