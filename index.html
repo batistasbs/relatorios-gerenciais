@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Portal de Relatórios | Diretoria</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal de Relatórios | Diretoria</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="layout">
+  <!-- TELA DE LOGIN -->
+  <div id="login" class="login-wrap">
+    <div class="login-card">
+      <div class="login-header">
+        <div class="login-icon">📊</div>
+        <h1>Acesso Restrito</h1>
+        <p>diretoria123</p>
+      </div>
+
+      <label class="label" for="senha">Senha</label>
+      <input class="input" type="password" id="senha" placeholder="••••••••" />
+
+      <button class="btn" onclick="acessar()">Entrar</button>
+      <p id="erro" class="erro"></p>
+      <p class="hint">Dica: se esquecer, fale com o administrador do portal.</p>
+    </div>
+  </div>
+
+  <!-- PORTAL (inicia escondido) -->
+  <div id="portal" class="layout hidden">
 
     <!-- MENU LATERAL -->
     <aside class="sidebar">
-        <h2>📊 Gestão Resmedical</h2>
+      <h2>📈 Gestão</h2>
 
-        <button onclick="carregarRelatorio('faturamento')">
-            Faturamento
-        </button>
+      <button class="nav-btn" onclick="carregarRelatorio('faturamento')">
+        Faturamento
+      </button>
 
-        <button onclick="carregarRelatorio('orcamento_2026')">
-            Orçamento 2026
-        </button>
+      <button class="nav-btn" onclick="carregarRelatorio('orcamento_2026')">
+        Orçamento 2026
+      </button>
+
+      <div class="sidebar-footer">
+        <button class="nav-btn secondary" onclick="sair()">Sair</button>
+      </div>
     </aside>
 
     <!-- CONTEÚDO -->
-<main class="content">
-    <h1 id="titulo">Relatório de Faturamento</h1>
+    <main class="content">
+      <h1 id="titulo">Relatório de Faturamento</h1>
 
-    <iframe
+      <iframe
         id="iframeRelatorio"
-        src="https://app.powerbi.com/view?r=eyJrIjoiYjAwMmM0NzUtNmM3OS00OWIyLThhNTItMTg1OGExMzM5MTk5IiwidCI6ImJiNWFlODA1LTM1YmYtNGRkNS05NGZlLWQ4M2JiMWVkNDI0MiJ9"
+        src=""
         allowfullscreen>
-    </iframe>
-</main>
+      </iframe>
+    </main>
 
+  </div>
 
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
